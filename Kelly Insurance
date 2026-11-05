@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelly & Associates Insurance Agency | 100+ Independent Carriers</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            dark: '#0b132b',
+                        },
+                        emeraldCustom: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+        .view-panel { display: none; }
+        .view-panel.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-dark text-slate-300 text-xs sm:text-sm py-2 px-4 text-center border-b border-slate-800 flex justify-between items-center max-w-full">
+        <div class="container mx-auto flex justify-between items-center">
+            <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <strong class="text-white">Independent Choice:</strong> Access to 100+ A-Rated Carriers for Stateline Families & Businesses
+            </span>
+            <div class="hidden md:flex items-center gap-6 text-xs">
+                <span>📍 Rockford & Janesville Stateline Region</span>
+                <span>📞 Direct Access: (815) 555-0192</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="container mx-auto px-4 py-3.5 flex items-center justify-between">
+            <!-- BRAND LOGO -->
+            <a href="#" onclick="switchView('overview')" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-emerald-500 flex items-center justify-center text-white font-bold font-heading text-xl shadow-md">
+                    K
+                </div>
+                <div>
+                    <span class="font-heading font-extrabold text-slate-900 text-xl tracking-tight block leading-none">KELLY & ASSOCIATES</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-sky-600 block mt-0.5">Insurance Agency</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAV TABS -->
+            <nav class="hidden lg:flex items-center gap-1 bg-slate-100 p-1.5 rounded-full border border-slate-200 text-sm font-medium">
+                <button onclick="switchView('overview')" id="nav-overview" class="nav-btn active px-4 py-2 rounded-full text-slate-700 hover:text-slate-900 transition font-semibold">
+                    Agency Overview
+                </button>
+                <button onclick="
